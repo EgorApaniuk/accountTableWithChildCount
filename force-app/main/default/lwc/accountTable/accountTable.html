@@ -1,0 +1,16 @@
+<template>
+    <lightning-tabset variant="scoped" active-tab-value="0">
+        <lightning-tab value="0" label="Contacts" onactive={handleActive}>
+            <lightning-card>
+                    <lightning-datatable hide-checkbox-column key-field="Id" data={data} columns={columns}>
+                    </lightning-datatable>
+            </lightning-card>
+        </lightning-tab>
+        <lightning-tab value="1" label="Opportunities" onactive={handleActive}>
+            <lightning-card>
+                    <lightning-datatable hide-checkbox-column key-field="Id" data={data} columns={columns}>
+                    </lightning-datatable>
+            </lightning-card>
+        </lightning-tab>
+    </lightning-tabset>
+</template>
