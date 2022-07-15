@@ -30,7 +30,7 @@ export default class AccountTable extends LightningElement {
     }
 
     handleActive(event) {
-        if (event.target.value == 0) { // 0 - is Contact tab value
+        if (event.target.value == 0) {
             this.columns = [...COLUMNS].filter(col => col.fieldName != 'Opportunity_Count__c'); 
         } else { 
             this.columns = [...COLUMNS].filter(col => col.fieldName != 'Contact_Count__c');

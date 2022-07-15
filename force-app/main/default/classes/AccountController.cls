@@ -3,7 +3,7 @@ public with sharing class AccountController {
     @AuraEnabled(cacheable=true)
     public static List<Account> getAccounts() {
         List<Account> accounts = new List<Account>();
-        accounts  = [SELECT Id, Name, Industry, Opportunity_Count__c, Contact_Count__c FROM Account];
+        accounts = [SELECT Id, Name, Industry, Opportunity_Count__c, Contact_Count__c FROM Account];
         return accounts;
     }
 
