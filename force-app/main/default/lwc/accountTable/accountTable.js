@@ -30,9 +30,9 @@ export default class AccountTable extends LightningElement {
     }
 
     handleActive(event) {
-        if (event.target.value == 0) {
+        if (event.target.value == 0) { // hide Opportunity Count
             this.columns = [...COLUMNS].filter(col => col.fieldName != 'Opportunity_Count__c'); 
-        } else { 
+        } else { // hide Contact Count
             this.columns = [...COLUMNS].filter(col => col.fieldName != 'Contact_Count__c');
         } 
     }
