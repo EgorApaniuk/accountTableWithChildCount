@@ -23,7 +23,7 @@ public with sharing class AccountController {
                 }
             }
 
-                for (Account ac: [Select Id,Contact_Count__c,(SELECT Id FROM Contacts) FROM Account WHERE Id IN:accId]) {
+                for (Account ac: [SELECT Id,Contact_Count__c,(SELECT Id FROM Contacts) FROM Account WHERE Id IN:accId]) {
                     ac.Contact_Count__c=ac.Contacts.size();
                     AccountMap.put(ac.Id,ac);
                 }
@@ -47,7 +47,7 @@ public with sharing class AccountController {
                 }
             }
 
-                for (Account ac:[Select Id,Opportunity_Count__c, (SELECT Id FROM Opportunities) FROM Account WHERE Id IN:accId]) {
+                for (Account ac:[SELECT Id,Opportunity_Count__c, (SELECT Id FROM Opportunities) FROM Account WHERE Id IN:accId]) {
                     ac.Opportunity_Count__c=ac.Opportunities.size();
                     AccountMap.put(ac.Id,ac);
                 }
