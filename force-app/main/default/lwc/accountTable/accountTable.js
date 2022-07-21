@@ -8,9 +8,9 @@ import OPPORTUNITY_COUNT_FIELD from '@salesforce/schema/Account.Opportunity_Coun
 
 const COLUMNS = [
     {label: 'Name', fieldName: 'Name', type: 'text', editable: false},
-    {label: 'Industry', fieldName: 'Industry', type: 'text', editable: false },
-    {label: 'Contact Count', fieldName: 'Contact_Count__c', type: 'number', editable: false },
-    {label: 'Opportunity Count', fieldName: 'Opportunity_Count__c', type: 'number', editable: false },
+    {label: 'Industry', fieldName: 'Industry', type: 'text', editable: false},
+    {label: 'Contact Count', fieldName: 'Contact_Count__c', type: 'number', editable: false},
+    {label: 'Opportunity Count', fieldName: 'Opportunity_Count__c', type: 'number', editable: false},
 ];
 
 export default class AccountTable extends LightningElement {
