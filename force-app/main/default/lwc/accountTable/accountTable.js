@@ -19,7 +19,7 @@ export default class AccountTable extends LightningElement {
     wiredAccounts;
 
     @wire(getAccounts)
-    refreshWiredAccounts(value){
+    refreshWiredAccounts(value) {
         this.wiredAccounts = value;
         const {data, error} = value;
         if (data) {
